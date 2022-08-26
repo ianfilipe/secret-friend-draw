@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom'
+import { useDrawner } from '../../state/hook/useDrawner'
 import { useParticipantsList } from '../../state/hook/useParticipantsList'
 
 function Footer() {
@@ -6,7 +7,10 @@ function Footer() {
 
   const navigateTo = useNavigate()
 
+  const draw = useDrawner()
+
   const start = () => {
+    draw()
     navigateTo('/draw')
   }
 

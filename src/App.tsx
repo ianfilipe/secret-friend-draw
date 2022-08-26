@@ -1,13 +1,15 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { RecoilRoot } from 'recoil'
-import Form from './components/Form'
+import Config from './pages/Config'
+import Draw from './pages/Draw'
 
 function App() {
   return (
     <BrowserRouter>
       <RecoilRoot>
         <Routes>
-          <Route path="/" element={<Form />} />
+          <Route path="/" element={<Config />} />
+          <Route path="/draw" element={<Draw />} />
         </Routes>
       </RecoilRoot>
     </BrowserRouter>
